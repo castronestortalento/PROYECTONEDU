@@ -1,0 +1,2 @@
+La pagina web que desarrollaremos será dirigida al mercado de la capacitación empresarial de las personas que por iniciativa propia desean desarrollarse en tematicas del management
+Habra distintas temáticas que seran diferenciadas, en esta etapa del proyecto todos los cursos están direccionados a las habilidades blandas con el fin de mejorar las competencias interpersonales de las personas.

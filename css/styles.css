@@ -1,0 +1,279 @@
+body {
+  background-color: rgba(221, 223, 223, 0.937);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  /* padding: 1rem; */
+}
+
+nav {
+  background-color: rgb(30, 30, 30);
+  margin: 2px;
+  padding: 10px 10px;
+  /* display: flex; */
+  list-style-type: none;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navnav-pills {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  gap: 0.1rem;
+  background-color: rgb(30, 30, 30);
+  list-style-type: none;
+  margin: 2px 10px;
+  padding: 2px 10px;
+}
+
+.nav-item {
+  background-color: rgba(49, 92, 166, 0.817);
+  text-align: center;
+  /* margin: 2px 10px;*/
+  padding: 2px;
+}
+
+.nav-link {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  /* margin: 0.1rem; */
+}
+
+#home {
+  background-color: rgba(196, 34, 34, 0.881);
+  /* margin: 2px 10px;
+  padding: 2px 10px; */
+}
+
+#home2 {
+  background-color: rgba(49, 92, 166, 0.817);
+  margin: 2px 10px;
+  padding: 2px 10px;
+}
+
+.media {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  margin: 2px 2px;
+  width: 50%;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin: 2px 0px;
+  width: 50%;
+}
+
+.carousel-inner {
+  object-fit: cover;
+  justify-content: center;
+}
+
+.logo {
+  margin: 2.5% 10%;
+}
+
+.titulo {
+  display: flex;
+  margin: 2px 10px;
+  padding: 2px 20px;
+  list-style-type: none;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.titulo2 {
+  margin: 2px 10px 0px;
+  justify-items: end;
+  font-size: 50%;
+}
+
+footer {
+  padding: 4px;
+  background-color: grey;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.pie {
+  display: flex;
+  justify-content: center;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+}
+
+.redes_sociales {
+  display: block;
+  justify-content: center;
+  list-style-type: none;
+  margin-left: 5px;
+}
+
+.map_label {
+  display: flex;
+  justify-content: center;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  object-fit: scale-down;
+}
+
+form {
+  display: block;
+  margin-left: 100px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  background-color: white;
+}
+
+.grid-item {
+  background-color: lightgrey;
+  border: brown 1px solid;
+  border-radius: 5%;
+  margin: 10px;
+}
+
+.curso {
+  display: block;
+  justify-items: center;
+}
+
+.bienvenido {
+  display: block;
+  margin: 1%;
+  padding: 2%;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.grid_item2 {
+  background-color: rgba(49, 92, 166, 0.817);
+  color: white;
+  /* border: brown 1px solid; */
+  border-radius: 1%;
+  padding: 3%;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  background-color: white;
+}
+
+.cart {
+  text-align: center;
+  font-size: small;
+  margin: 0.5rem;
+}
+
+.curso_titulo {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.contacto {
+  background-color: rgba(221, 223, 223, 0.937);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* .roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+} */
