@@ -21,14 +21,12 @@
 
     <title>Contacto</title>
     <script>
-        // Función para cargar el contenido de un archivo HTML
         function loadNavbar() {
             fetch('./navbar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar-container').innerHTML = data;
 
-                    // Marcar el link activo según la URL actual
                     const currentPath = window.location.pathname;
                     const links = document.querySelectorAll('.navbar ul li a');
                     links.forEach(link => {
@@ -45,7 +43,7 @@
 
 <body class="contacto">
     <header>
-       <div id="navbar-container"></div> <!-- Aquí se cargará el navbar -->  
+       <div id="navbar-container"></div>   
     </header>
     <main>
         <form action="https://formspree.io/f/mwpkbkdy" method="post">
@@ -61,7 +59,7 @@
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="" emailHelp
                     placeholder="ingresar email" required>
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div><br><br>
+                <div id="emailHelp" class="form-text">Nunca compartiremos tu mail con extraños.</div><br><br>
             </div>
             <label for="cel">Celular:</label>
             <input type="tel" id="cel" name="cel" placeholder="ingresar celular" required><br><br>

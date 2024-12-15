@@ -49,10 +49,8 @@ var learningPrograms = [
     },
   ];
   
-  //Inicializacion del carrito de compras
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   
-  // Función para mostrar los cursos
   function showPrograms() {
     const container = document.getElementById("courses-container");
   
@@ -69,17 +67,15 @@ var learningPrograms = [
         <div class="description"></div>
       `;
   
-      // Botón para mostrar descripción ampliada
       card.querySelector(".btn-details").addEventListener("click", () => {
         const descriptionDiv = card.querySelector(".description");
         if (descriptionDiv.innerHTML === "") {
           descriptionDiv.innerHTML = `<p>${curso.description}</p>`;
         } else {
-          descriptionDiv.innerHTML = ""; // Alterna la visibilidad
+          descriptionDiv.innerHTML = "";
         }
       });
   
-      // Botón para añadir al carrito
       card.querySelector(".btn-add-to-cart").addEventListener("click", () => {
         addToCart(curso);
       });
@@ -88,28 +84,22 @@ var learningPrograms = [
     });
   }
   
-  // Función para añadir un curso al carrito
   function addToCart(curso) {
-    // Verificar si el producto ya está en el carrito
     const existingProduct = cart.find((item) => item.id === curso.id);
   
     if (existingProduct) {
-      // Si ya existe, incrementa la cantidad
       existingProduct.quantity += 1;
     } else {
-      // Si no existe, añádelo al carrito con cantidad inicial de 1
       cart.push({ ...curso, quantity: 1 });
     }
   
-    // Guardar el carrito en localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
     alert(`${curso.name} fue añadido al carrito`);
   }
 
   
-  // Función para mostrar el contenido del carrito en la consola (puedes adaptarlo para mostrarlo en el DOM)
   function showCart() {
     console.log("Carrito de Compras:", cart);
   }
-  // Llama a la función cuando se cargue la página
+
   document.addEventListener("DOMContentLoaded", showPrograms);

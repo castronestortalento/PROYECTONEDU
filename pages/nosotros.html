@@ -21,14 +21,12 @@
         }
     </style>
     <script>
-        // Función para cargar el contenido de un archivo HTML
         function loadNavbar() {
             fetch('./navbar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar-container').innerHTML = data;
 
-                    // Marcar el link activo según la URL actual
                     const currentPath = window.location.pathname;
                     const links = document.querySelectorAll('.navbar ul li a');
                     links.forEach(link => {
@@ -45,7 +43,7 @@
 
 <body>
     <header>
-        <div id="navbar-container"></div> <!-- Aquí se cargará el navbar -->
+        <div id="navbar-container"></div>
     </header>
     <main>
         <div class="container my-5">

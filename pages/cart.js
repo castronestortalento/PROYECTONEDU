@@ -1,12 +1,11 @@
-// Recuperar el carrito del localStorage
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Función para renderizar los productos del carrito
+
 function renderCart() {
   const cartItemsContainer = document.getElementById("cart-items");
   const cartTotalElement = document.getElementById("cart-total");
 
-  // Limpiar el contenedor
   cartItemsContainer.innerHTML = "";
 
   if (cart.length === 0) {
@@ -15,7 +14,7 @@ function renderCart() {
     return;
   }
 
-  // Generar los elementos del carrito
+
   let total = 0;
   cart.forEach((item, index) => {
     total += item.amount * item.quantity;
@@ -39,18 +38,18 @@ function renderCart() {
     cartItemsContainer.appendChild(cartItem);
   });
 
-  // Actualizar el total
+
   cartTotalElement.textContent = total;
 }
 
-// Función para eliminar un producto del carrito
+
 function removeFromCart(index) {
   cart.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 }
 
-// Función para vaciar el carrito
+
 document.getElementById("clear-cart").addEventListener("click", () => {
   if (confirm("¿Estás seguro de que quieres vaciar el carrito?")) {
     cart = [];
@@ -59,5 +58,4 @@ document.getElementById("clear-cart").addEventListener("click", () => {
   }
 });
 
-// Renderizar el carrito al cargar la página
 document.addEventListener("DOMContentLoaded", renderCart);

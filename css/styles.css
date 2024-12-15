@@ -33,9 +33,7 @@ nav {
 
 .navbar {
   background-color: #ffffff;
-  /* Fondo blanco */
   border-bottom: 1px solid #ddd;
-  /* Espaciado general */
   font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
@@ -47,7 +45,6 @@ nav {
 
 .navbar .logo {
   width: 50px;
-  /* Tamaño del logo */
   font-size: 1.5em;
   font-weight: bold;
   height: auto;
@@ -61,12 +58,12 @@ nav {
 
 .navbar ul li {
   margin: 0 15px;
-  flex-grow: 1; /* Hace que todos los items crezcan de forma igualitaria */
-  text-align: center; /* Centra el contenido en cada item */
+  flex-grow: 1; 
+  text-align: center; 
 }
 
 .navbar ul li a {
-  display: block; /* Hace que el enlace ocupe todo el espacio del item */
+  display: block; 
   text-decoration: none;
   color: #fff;
   padding: 8px 12px;
@@ -104,7 +101,6 @@ nav ul li a.active {
 
 #navbar-container {
   width: 100%;
-  /* Ocupa todo el ancho de la página */
   margin: 0;
   padding: 0;
 }
@@ -117,15 +113,13 @@ nav ul li a.active {
 
 .icon:hover {
   transform: scale(1.1);
-  /* Efecto de agrandamiento */
 }
 
 .navbar .gap-3 {
   gap: 1.5rem;
-  /* Espacio entre los íconos */
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
@@ -143,9 +137,7 @@ nav ul li a.active {
 
 .nav_inicio {
   display: flex;
-  /* Usamos flexbox */
   align-items: center;
-  /* Centramos verticalmente */
 }
 
 .nav-item {
@@ -240,41 +232,41 @@ footer {
 .pie {
   display: flex;
   justify-content: space-between;
-  max-width: 1000px; /* Limitar el ancho máximo */
-  margin: 0 auto; /* Centrar el contenido */
-  flex-wrap: wrap; /* Permitir que los elementos se ajusten en filas */
-  align-items: flex-start; /* Alinear los elementos al inicio */
-  gap: 20px; /* Espacio entre elementos */
+  max-width: 1000px;
+  margin: 0 auto; 
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px; 
 }
 
 footer .pie > div {
-  flex: 1; /* Cada sección ocupa el mismo espacio */
-  min-width: 200px; /* Evitar que las secciones se vuelvan demasiado pequeñas */
+  flex: 1; 
+  min-width: 200px;
 }
 
 footer .ubicacion {
   display: flex;
-  align-items: center; /* Centrar verticalmente */
-  gap: 10px; /* Espaciado entre el título y el mapa */
+  align-items: center; 
+  gap: 10px; 
 }
 
 .redes_sociales {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centrar los íconos */
-  gap: 15px; /* Espaciado entre íconos */
+  justify-content: center;
+  gap: 15px;
 }
 
 footer .redes_sociales img {
-  width: 30px; /* Tamaño de los íconos */
+  width: 30px; 
   height: auto;
 }
 
 footer .map iframe {
-  width: 200px; /* Reducir el tamaño del mapa */
-  height: 100px; /* Altura ajustada */
-  border: 0; /* Sin borde */
+  width: 200px; 
+  height: 100px; 
+  border: 0; 
 }
 
 footer .ubicacion-texto h6 {
@@ -387,11 +379,8 @@ h4 {
 
 i.bx {
   font-size: 24px;
-  /* Cambia el tamaño según lo necesites */
   display: inline-block;
-  /* Para asegurarte de que se comporte bien con otros elementos */
   vertical-align: middle;
-  /* Alineación si está junto con texto */
 }
 
 .iconos {
@@ -411,7 +400,6 @@ i.bx {
 
 .icono:hover {
   color: #f0c040;
-  /* Cambia el color al pasar el mouse */
 }
 
 ul {
@@ -425,7 +413,7 @@ ul li {
   color: #555;
 }
 
-/* Fotos circulares y responsivas */
+
 img.img-fluid {
   max-width: 200px;
   height: auto;
@@ -433,7 +421,7 @@ img.img-fluid {
   border: 3px solid #ddd;
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
   ul li {
     font-size: 0.85rem;
@@ -441,35 +429,34 @@ img.img-fluid {
 }
 
 .tarjeta {
-  border: 2px solid rgba(0, 0, 0, 0.2); /* Borde gris claro */
-  border-radius: 10px; /* Esquinas redondeadas */
-  padding: 20px; /* Espaciado interno */
-  background-color: #f9f9f9; /* Fondo claro para destacar */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px; 
+  padding: 20px; 
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .tarjeta h4 {
   margin-top: 15px;
-  color: #333; /* Color de texto */
+  color: #333;
 }
 
 .tarjeta img {
-  border: 3px solid #fff; /* Borde blanco alrededor de las imágenes */
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la imagen */
+  border: 3px solid #fff; 
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .product-card img {
-  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-  height: 200px; /* Altura fija para todas las imágenes */
-  object-fit: contain; /* Ajusta la imagen sin distorsionarla */
-  border-radius: 10px; /* (Opcional) Redondea las esquinas */
+  width: 100%; 
+  height: 200px; 
+  object-fit: contain; 
+  border-radius: 10px; 
 }
 
-/* Estilo para el botón "Añadir al carrito" */
 .btn-add-to-cart {
-  background-color: #f8f8f8; /* Fondo suave */
+  background-color: #f8f8f8;
   border: none;
-  padding: 8px 15px; /* Ajuste del padding para que el botón sea compacto */
+  padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
@@ -478,130 +465,127 @@ img.img-fluid {
   transition: background-color 0.3s ease;
 }
 
-/* Cambio de color al hacer hover sobre el botón */
+
 .btn-add-to-cart:hover {
-  background-color: #e0e0e0; /* Color más oscuro al pasar el mouse */
+  background-color: #e0e0e0; 
 }
 
-/* Eliminar el color verde al hacer clic (estado :active) */
+
 .btn-add-to-cart:active {
-  background-color: #d6d6d6; /* Color más oscuro al presionar */
-  outline: none; /* Quita cualquier contorno visible */
+  background-color: #d6d6d6; 
+  outline: none; 
 }
 
-/* Eliminar el borde verde al hacer clic o enfocar (estado :focus) */
+
 .btn-add-to-cart:focus {
-  outline: none; /* Elimina el borde de enfoque predeterminado */
-  box-shadow: none; /* Evita sombras extra */
+  outline: none; 
+  box-shadow: none; 
 }
 .btn-add-to-cart:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-/* Estilo para el icono dentro del botón */
+
 .cart-icon {
-  width: 20px; /* Ancho del ícono más pequeño */
-  height: 20px; /* Alto del ícono más pequeño */
-  max-width: 20px; /* Asegura que no se agrande más de este tamaño */
-  max-height: 20px; /* Asegura que no se agrande más de este tamaño */
-  object-fit: contain; /* Asegura que el ícono se mantenga proporcionado */
+  width: 20px; 
+  height: 20px; 
+  max-width: 20px;
+  max-height: 20px;
+  object-fit: contain; 
 }
 
-/* Estilo general del body */
 body.contacto {
   font-family: "Roboto", sans-serif;
-  background-color: #f5f5f5; /* Fondo claro */
+  background-color: #f5f5f5; 
   margin: 0;
   padding: 0;
 }
 
-/* Contenedor del formulario */
+
 form {
-  background-color: #ffffff; /* Fondo blanco */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  padding: 20px 40px; /* Espaciado interno */
-  max-width: 600px; /* Ancho máximo */
-  margin: 50px auto; /* Centrar el formulario */
+  background-color: #ffffff; 
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px; 
+  max-width: 600px; 
+  margin: 50px auto; 
   display: flex;
-  flex-direction: column; /* Organizar elementos en columna */
-  gap: 15px; /* Espaciado entre elementos */
+  flex-direction: column; 
+  gap: 15px; 
 }
 
-/* Etiquetas de los campos */
+
 form label {
   font-weight: bold;
-  color: #333; /* Color del texto */
+  color: #333; 
   margin-bottom: 5px;
 }
 
-/* Campos de entrada */
+
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
 form textarea {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ddd; /* Borde gris claro */
-  border-radius: 5px; /* Bordes redondeados */
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
   font-size: 14px;
-  transition: border-color 0.3s ease; /* Animación en hover/focus */
+  transition: border-color 0.3s ease; 
 }
 
-/* Efecto al hacer focus en los campos */
+
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="tel"]:focus,
 form textarea:focus {
-  outline: none; /* Eliminar borde azul predeterminado */
-  border-color: #4caf50; /* Color verde al enfocar */
+  outline: none; 
+  border-color: #4caf50; 
 }
 
 /* Botones */
 form input[type="submit"],
 form input[type="reset"] {
-  background-color: blue; /* Fondo verde */
-  color: white; /* Texto blanco */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
+  background-color: blue; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  transition: background-color 0.3s ease; /* Animación de hover */
+  transition: background-color 0.3s ease; 
   object-fit: cover;
 }
 
-/* Efecto hover en botones */
+
 form input[type="submit"]:hover,
 form input[type="reset"]:hover {
-  background-color: darkgrey; /* Color más oscuro al pasar el mouse */
+  background-color: darkgrey; 
 }
 
-/* Espaciado entre botones */
+
 form input[type="reset"] {
   margin-left: 10px;
 }
 
-/* Textarea */
+
 form textarea {
-  resize: vertical; /* Permite redimensionar solo verticalmente */
-  min-height: 150px; /* Altura mínima */
+  resize: vertical; 
+  min-height: 150px; 
 }
 
-/* Ayuda del email */
 #emailHelp {
   font-size: 12px;
-  color: #888; /* Texto gris claro */
+  color: #888; 
 }
 
-/* Mensaje de texto debajo de campos */
 .form-text {
   font-size: 12px;
   color: #777;
 }
 
-/* Ajustar el contenedor para pantallas más pequeñas */
+
 @media (max-width: 768px) {
   form {
     padding: 20px;
@@ -609,8 +593,8 @@ form textarea {
 
   form input[type="submit"],
   form input[type="reset"] {
-    width: 100%; /* Botones ocupan todo el ancho en dispositivos pequeños */
-    margin: 5px 0; /* Espaciado vertical entre botones */
+    width: 100%; 
+    margin: 5px 0;
     background-color: blue;
   }
 }
