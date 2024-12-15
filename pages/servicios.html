@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="import" href="./nosotros.html">
-    <link rel="import" href="./servicios.html">
-    <link rel="import" href="../index.html">
-    <link rel="import" href="./contacto.html">
+      <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../images/NEDU.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,33 +13,71 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <title>Servicios</title>
+    <style>
+        /* Asegurarse de que el body y el html ocupen todo el viewport */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Hacer que el contenedor ocupe toda la pantalla */
+        .container {
+            display: flex; /* Usar flexbox para centrar el contenido */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            height: 100%; /* Altura total de la pantalla */
+            padding: 0; /* Sin margen interno */
+        }
+
+        /* Estilo para la imagen */
+        img {
+            max-width: 100%; /* La imagen ocupa todo el ancho disponible */
+            max-height: 100%; /* La imagen no excede la altura disponible */
+            object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
+        }
+    </style>
+     <script>
+        // Función para cargar el contenido de un archivo HTML
+        function loadNavbar() {
+            fetch('./navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+
+                    // Marcar el link activo según la URL actual
+                    const currentPath = window.location.pathname;
+                    const links = document.querySelectorAll('.navbar ul li a');
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === currentPath) {
+                            link.classList.add('active');
+                        }
+                    });
+                });
+        }
+
+        window.onload = loadNavbar;
+    </script>
+</head>
+
+<body >
+    <header>
+        <div id="navbar-container"></div> <!-- Aquí se cargará el navbar -->
+    </header>
+     <main>
+        <div class="container">
+                    <img src="../images/servicios.jpeg"  alt="Servicios">
+        </div>
+    </main>
+    <!-- scripts de JS necesario para bootstrap y los iconos -->
+    <!--  Script de  bootstrap para funcionalidades interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
     <!--        script para los iconos de boxIcons -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-    <title>Servicios</title>
-</head>
-
-<body class="contacto">
-       <header>
-        <div class="titulo">
-            <img src="../images/NEDU.png" width="100" height="100" class="logo" alt="Imagen de Nedu">
-        </div>
-    </header>
-    <nav>
-        <ul class="navnav-pills">
-            <li class="nav-item" id="home"><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="./cursos.html">Cursos</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-<main>
-    <h1>En preparacion</h1>
-</main>
 </body>
 
 </html>

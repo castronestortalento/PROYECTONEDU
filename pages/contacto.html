@@ -5,10 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="import" href="./nosotros.html">
-    <link rel="import" href="./servicios.html">
-    <link rel="import" href="../index.html">
-    <link rel="import" href="./contacto.html">
     <link rel="shortcut icon" href="../images/NEDU.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,45 +20,58 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <title>Contacto</title>
+    <script>
+        // Función para cargar el contenido de un archivo HTML
+        function loadNavbar() {
+            fetch('./navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+
+                    // Marcar el link activo según la URL actual
+                    const currentPath = window.location.pathname;
+                    const links = document.querySelectorAll('.navbar ul li a');
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === currentPath) {
+                            link.classList.add('active');
+                        }
+                    });
+                });
+        }
+
+        window.onload = loadNavbar;
+    </script>
 </head>
 
 <body class="contacto">
-       <header>
-        <div class="titulo">
-            <img src="../images/NEDU.png" width="100" height="100" class="logo" alt="Imagen de Nedu">
-        </div>
+    <header>
+       <div id="navbar-container"></div> <!-- Aquí se cargará el navbar -->  
     </header>
-    <nav>
-        <ul class="navnav-pills">
-            <li class="nav-item" id="home"><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="./cursos.html">Cursos</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-    <form action="https://formspree.io/f/mwpkbkdy" method="post">
-        <div class="mb-3">
-        <label for="fname" class="form-label">Nombre:</label>
-        <input type="text" id="fname" name="fname" required><br><br></div>
-         <div class="mb-3">
-        <label for="lname" class="form-label">Apellido:</label>
-        <input type="text" id="lname" name="lname" required><br><br>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="" emailHelp
-                placeholder="ingresar email" required>
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div><br><br>
-        </div>
-        <label for="cel">Celular:</label>
-        <input type="tel" id="cel" name="cel" placeholder="ingresar celular" required><br><br>
-        <label for="consulta">Consulta:</label>
-        <textarea id="consulta" name="consulta" rows="10" col="50" placeholder="Detalle su consulta"
-            required></textarea>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Borrar">
-    </form>
+    <main>
+        <form action="https://formspree.io/f/mwpkbkdy" method="post">
+            <div class="mb-3">
+                <label for="fname" class="form-label">Nombre:</label>
+                <input type="text" id="fname" name="fname" required><br><br>
+            </div>
+            <div class="mb-3">
+                <label for="lname" class="form-label">Apellido:</label>
+                <input type="text" id="lname" name="lname" required><br><br>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="" emailHelp
+                    placeholder="ingresar email" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div><br><br>
+            </div>
+            <label for="cel">Celular:</label>
+            <input type="tel" id="cel" name="cel" placeholder="ingresar celular" required><br><br>
+            <label for="consulta">Consulta:</label>
+            <textarea id="consulta" name="consulta" rows="10" col="50" placeholder="Detalle su consulta"
+                required></textarea>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+    </main>
 </body>
 
 </html>

@@ -17,34 +17,32 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 		rel="stylesheet">
-	<!-- scripts de JS necesario para bootstrap y los iconos -->
-	<!--  Script de  bootstrap para funcionalidades interactivas -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
-
-	<!--        script para los iconos de boxIcons -->
-	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 	<title>NeduLearnStation</title>
 </head>
 
 <body>
 	<header>
-		<div class="titulo">
-			<img src="./images/NEDU.png" width="100" height="100" class="logo" alt="Imagen de Nedu">
-			<!-- reveer titulos -->
-			<!-- <h6 class="titulo2">Capacitacion Profesional</h6> -->
-		</div>
+		<nav class="navbar sticky-top d-flex justify-content-between align-items-center px-4">
+					 <div class="d-flex align-items-center">
+					<img src="./images/NEDU.png" class="logo" alt="Imagen de Nedu">
+					<!-- reveer titulos -->
+					<h6 class="ms-3 mb-0 titulo2">Capacitacion Profesional</h6>
+					</div>
+				<ul class="nav nav-pills d-flex align-items-center">
+					<li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
+					<li class="nav-item"><a class="nav-link" href="./pages/servicios.html">Servicios</a></li>
+					<li class="nav-item"><a class="nav-link" href="./pages/cursos.html">Cursos</a></li>
+					<li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+				</ul>
+			<div class="d-flex align-items-center gap-3">
+				<a href="./pages/cart.html"><img src="./images/cart.png" class="icon" alt="Carrito"></a>
+				<img src="./images/user.png" class="icon" alt="Usuario">
+			</div>
+		</nav>
 	</header>
-	<nav>
-		<ul class="navnav-pills">
-			<li class="nav-item" id="home"><a class="nav-link" href="index.html">Inicio</a></li>
-			<li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
-			<li class="nav-item"><a class="nav-link" href="./pages/servicios.html">Servicios</a></li>
-			<li class="nav-item"><a class="nav-link" href="./pages/cursos.html">Cursos</a></li>
-			<li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
-		</ul>
-	</nav>
 	<main>
 		<div class="media" class="d-flex align-items-start">
 			<!-- incorporar carrousel de fotos -->
@@ -97,13 +95,19 @@
 				</div>
 			</div>
 			<div class="video">
-				<!-- <h6>Lo invitamos a ver el siguiente video</h6> -->
 				<!-- <section class="video"> -->
-				<video src="./video/El desafio 1.mp4" class="d-block w-100" controls poster="./images/Nedunombre.png">Su
+				<video id="video1" src="./video/El desafio 1.mp4" class="d-block w-100" controls
+					poster="./images/Nedunombre.png">Su
 					navegador no
 					soporta
 					la etiqueta de video</video>
 				<!-- </section> -->
+				<script>
+					video = document.getElementById('video1');
+					video.addEventListener('ended', function () {
+						window.location.href = 'index.html';
+					})
+				</script>
 			</div>
 		</div>
 	</main>
@@ -111,7 +115,8 @@
 		<div class="bienvenido">
 			<p>Bienvenido a NEDU
 			</p>
-			<p>Somos una consultora enfocada en la industria Retail y estamos convencidos que una operación de excelencia tiene un impacto positivo en la experiencia del
+			<p>Somos una consultora enfocada en la industria Retail y estamos convencidos que una operación de
+				excelencia tiene un impacto positivo en la experiencia del
 				cliente y la rentabilidad del negocio; somos apasionados por este negocio!
 			</p>
 		</div>
@@ -123,12 +128,11 @@
 						d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532" />
 					<path
 						d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z" />
-					<path
+				</svg>	
+						<path
 						d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z" />
 				</svg>
 				<h4>Nuestra Mision</h4>
-
-
 				<p>Brindar CONSULTORIA Y SOLUCIONES DE APRENDIZAJE al empresario que impacten en la experiencia de
 					servicio al cliente y los resultados del negocio.</p>
 			</div>
@@ -153,37 +157,39 @@
 		<div class="pie">
 			<div><a class="redes" href="./pages/contacto.html">Contacto</a></div>
 			<div>
-				<div class="redes">
 					<h6>Redes Sociales</h><br>
-				</div>
-				<div>
 					<ul class="redes_sociales">
 						<li><a href="https://www.facebook.com/p/NEDU-Learning-Station-100063717752762/?_rdr"
 								target="_blank" rel="noopener noreferrer"><img src="./images/facebook.png"
-									alt="logo_facebook" width="20%"></a></li>
+									alt="logo_facebook"></a></li>
 						<li><a href="https://www.instagram.com/nedu.learningstation?igsh=YWtycnI4NG12bGtv"
 								target="_blank" rel="noopener noreferrer"><img src="./images/instagram.png"
-									alt="logo_instagram" width="20%"></a></li>
+									alt="logo_instagram"></a></li>
 						<li><a href="https://www.linkedin.com/company/91054951/admin/dashboard/" target="_blank"
 								rel="noopener noreferrer"><img src="./images/linkedin.png" alt="logo_linkedin"
-									width="20%"></a></li>
-
+									></a></li>
 					</ul>
-				</div>
 			</div>
-			<div>
-				<div class="map_label">
+			<div class="ubicacion">
+				<div class="ubicacion-texto">
 					<h6>Nuestra Ubicacion</h6><br>
 				</div>
 				<div class="map">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.201163541855!2d-58.44501212464467!3d-34.57377617296498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5c0481ef645%3A0x9aa5a8f2c6add841!2sCdad.%20de%20la%20Paz%20%26%20Av.%20Jorge%20Newbery%2C%20C1426%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1730671301293!5m2!1ses!2sar"
-						width="100" height="100" allowfullscreen="" frameborder="1" scrolling="yes"
-						title="mapa"></iframe>
+						 allowfullscreen="" frameborder="1" scrolling="yes"
+						title="mapa">
+					</iframe>
 				</div>
 			</div>
 		</div>
 	</footer>
+	<!-- scripts de JS necesario para bootstrap y los iconos -->
+	<!--  Script de  bootstrap para funcionalidades interactivas -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
 </body>
 
 </html>
